@@ -25,7 +25,7 @@ export default async function GameDetailPage({
 
   if (!game) notFound();
 
-  const rounds = game.rounds as Round[];
+ const rounds = game.rounds as unknown as Round[];
   const names = [game.team1Name, game.team2Name] as const;
   const finalScores = [game.team1Score, game.team2Score] as const;
 
